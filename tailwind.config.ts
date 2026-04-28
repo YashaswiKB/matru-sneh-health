@@ -47,6 +47,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        "primary-soft": "hsl(var(--primary-soft))",
+        "secondary-soft": "hsl(var(--secondary-soft))",
+        "accent-soft": "hsl(var(--accent-soft))",
+        "destructive-soft": "hsl(var(--destructive-soft))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
