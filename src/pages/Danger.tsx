@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { AlertTriangle, ShieldCheck, Phone } from "lucide-react";
+import { AlertTriangle, ShieldCheck } from "lucide-react";
 import PageShell from "@/components/PageShell";
 import { lsGet, lsSet } from "@/lib/storage";
 import { useLang } from "@/lib/useLang";
@@ -67,28 +67,28 @@ export default function Danger() {
       accent="destructive"
     >
       {danger ? (
-        <div className="bg-destructive text-destructive-foreground rounded-3xl p-6 mb-6 shadow-danger danger-pulse">
-          <div className="flex items-center gap-3 mb-2">
-            <AlertTriangle className="w-10 h-10 shrink-0" strokeWidth={2.5} />
-            <div className="text-2xl font-bold leading-tight">
-              {lang === "kn" ? "ಅಪಾಯ ಸೂಚನೆ ಪತ್ತೆ" : "Danger Sign Detected"}
+        <div className="bg-destructive text-destructive-foreground rounded-3xl p-7 mb-6 shadow-danger danger-pulse border-4 border-destructive-foreground/20">
+          <div className="flex flex-col items-center text-center gap-3">
+            <AlertTriangle className="w-20 h-20 shrink-0" strokeWidth={2.5} />
+            <div className="text-3xl font-extrabold leading-tight uppercase tracking-wide">
+              {lang === "kn" ? "ಅಪಾಯ ಸೂಚನೆ ಪತ್ತೆಯಾಗಿದೆ" : "Danger Sign Detected"}
             </div>
+            <div className="w-16 h-1 bg-destructive-foreground/60 rounded-full" />
+            <p className="text-2xl font-bold leading-snug">
+              {lang === "kn" ? "ತಕ್ಷಣವೇ ಆಸ್ಪತ್ರೆಗೆ ಭೇಟಿ ನೀಡಿ" : "Visit Hospital Immediately"}
+            </p>
           </div>
-          <p className="text-xl font-bold mt-2">
-            {lang === "kn" ? "ತಕ್ಷಣ ಆಸ್ಪತ್ರೆಗೆ ಭೇಟಿ ನೀಡಿ!" : "Visit Hospital Immediately!"}
-          </p>
-          <a
-            href="tel:108"
-            className="mt-4 flex items-center justify-center gap-2 bg-destructive-foreground text-destructive py-3.5 rounded-2xl font-bold text-lg active:scale-[0.98]"
-          >
-            <Phone className="w-5 h-5" /> {lang === "kn" ? "ತುರ್ತು 108 ಕರೆ ಮಾಡಿ" : "Call Emergency 108"}
-          </a>
         </div>
       ) : (
-        <div className="bg-success/10 text-success rounded-3xl p-5 mb-6 flex items-center gap-3">
-          <ShieldCheck className="w-7 h-7 shrink-0" />
-          <div className="font-bold text-lg">
-            {lang === "kn" ? "ಯಾವುದೇ ಅಪಾಯ ಸೂಚನೆ ಇಲ್ಲ" : "No danger signs detected"}
+        <div className="bg-success/10 text-success rounded-3xl p-5 mb-6 flex items-center gap-3 border-2 border-success/30">
+          <ShieldCheck className="w-8 h-8 shrink-0" />
+          <div>
+            <div className="font-bold text-lg">
+              {lang === "kn" ? "ಯಾವುದೇ ಅಪಾಯ ಸೂಚನೆ ಇಲ್ಲ" : "No danger signs detected"}
+            </div>
+            <div className="text-sm opacity-80">
+              {lang === "kn" ? "ತಕ್ಷಣದ ವೈದ್ಯಕೀಯ ಅಗತ್ಯವಿಲ್ಲ" : "No immediate medical attention needed"}
+            </div>
           </div>
         </div>
       )}

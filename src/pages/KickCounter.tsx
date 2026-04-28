@@ -6,7 +6,7 @@ import { useLang } from "@/lib/useLang";
 import { tr } from "@/lib/i18n";
 
 const KEY = "kicks";
-const DEBOUNCE_MS = 1500;
+const DEBOUNCE_MS = 3000;
 
 export default function KickCounter() {
   const [lang] = useLang();
@@ -24,16 +24,14 @@ export default function KickCounter() {
   const todayKicks = kicks.filter((t) => t >= startOfDay).length;
 
   const weekly = useMemo(() => {
-    // Per-hour counts for the past 7 days, grouped by day
-    const days: { date: Date; perHour: number }[] = [];
+    // Total kicks per day for the past 7 days
+    const days: { date: Date; total: number }[] = [];
     for (let i = 6; i >= 0; i--) {
       const d = new Date(startOfDay - i * 86400000);
       const start = d.getTime();
       const end = start + 86400000;
-      const count = kicks.filter((t) => t >= start && t < end).length;
-      // Per-hour over waking hours (assume 16h)
-      const perHour = +(count / 16).toFixed(1);
-      days.push({ date: d, perHour });
+      const total = kicks.filter((t) => t >= start && t < end).length;
+      days.push({ date: d, total });
     }
     return days;
   }, [kicks, startOfDay]);
@@ -73,13 +71,13 @@ export default function KickCounter() {
           </div>
         </button>
         <p className="text-sm text-muted-foreground mt-4">
-          {lang === "kn" ? "ತಪ್ಪಾದ ಎಣಿಕೆ ತಡೆಯಲು 1.5 ಸೆಕೆಂಡ್ ವಿಳಂಬ" : "1.5s debounce prevents double taps"}
+          {lang === "kn" ? "ತಪ್ಪಾದ ಎಣಿಕೆ ತಡೆಯಲು 3 ಸೆಕೆಂಡ್ ವಿಳಂಬ" : "3s debounce prevents double taps"}
         </p>
       </div>
 
       <section className="mt-10">
         <h2 className="text-xl font-bold mb-3">
-          {lang === "kn" ? "ವಾರದ ಕಿಕ್/ಗಂಟೆ" : "Weekly Kicks per Hour"}
+          {lang === "kn" ? "ವಾರದ ಒಟ್ಟು ಒದೆತಗಳು" : "Weekly Total Kicks"}
         </h2>
         <div className="bg-card rounded-2xl shadow-card overflow-hidden">
           <table className="w-full text-base">
@@ -87,7 +85,7 @@ export default function KickCounter() {
               <tr>
                 <th className="text-left py-3 px-4 font-semibold">{lang === "kn" ? "ದಿನ" : "Day"}</th>
                 <th className="text-right py-3 px-4 font-semibold">
-                  {lang === "kn" ? "ಪ್ರತಿ ಗಂಟೆ" : "Per hour"}
+                  {lang === "kn" ? "ಒಟ್ಟು ಒದೆತಗಳು" : "Total Kicks"}
                 </th>
               </tr>
             </thead>
@@ -97,7 +95,7 @@ export default function KickCounter() {
                   <td className="py-3 px-4">
                     {dayName(d.date)} <span className="text-muted-foreground text-sm">{d.date.getDate()}/{d.date.getMonth() + 1}</span>
                   </td>
-                  <td className="py-3 px-4 text-right font-semibold text-primary">{d.perHour}</td>
+                  <td className="py-3 px-4 text-right font-bold text-primary text-lg">{d.total}</td>
                 </tr>
               ))}
             </tbody>
