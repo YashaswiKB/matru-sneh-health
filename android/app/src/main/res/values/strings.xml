@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">MatruSneh Health</string>
+    <string name="title_activity_main">MatruSneh Health</string>
+    <string name="package_name">com.matrusneh.health</string>
+    <string name="custom_url_scheme">com.matrusneh.health</string>
+</resources>
