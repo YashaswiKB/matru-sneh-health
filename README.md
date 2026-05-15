@@ -1,12 +1,12 @@
-## 🌸Matru-Sneh Health
+# 🌸 Matru-Sneh Health
 
-Matru-Sneh Health is a maternal healthcare support application designed for pregnant women in rural areas.
-It is a lightweight, offline-first mobile application built to help users track essential pregnancy health activities easily without constant internet access.
+Matru-Sneh Health is a maternal healthcare support application designed for pregnant women in rural areas.  
+It is a lightweight, offline-first mobile application built to help users track essential pregnancy health activities without constant internet access.
 
-The application is designed for first-time smartphone users with a simple, accessible, and mobile-friendly interface.# Matru-Sneh Health
-
+The application is designed for first-time smartphone users with a simple, accessible, and mobile-friendly interface.
 
 ---
+
 
 ## 🚀 Key Features
 
@@ -54,7 +54,7 @@ Shows emergency warning:
 
 ---
 
-## Technical Features
+## 🛠️ Technical Features
 
 - Offline-first Progressive Web App 
 - Add to Home Screen support
