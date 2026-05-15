@@ -1,4 +1,9 @@
-# Matru-Sneh Health
+🌸 Matru-Sneh Health
+
+Matru-Sneh Health is a maternal healthcare support application designed for pregnant women in rural areas.
+It is a lightweight, offline-first mobile application built to help users track essential pregnancy health activities easily without constant internet access.
+
+The application is designed for first-time smartphone users with a simple, accessible, and mobile-friendly interface.# Matru-Sneh Health
 
 Matru-Sneh Health is an Application designed to support maternal healthcare for pregnant women in rural areas.
 
@@ -6,7 +11,7 @@ The application is simple, mobile-friendly, and works even without internet conn
 
 ---
 
-## Features
+🚀 Key Features
 
 ### 1. Kick Counter
 - Large tap button to record baby movement
@@ -63,16 +68,26 @@ Shows emergency warning:
 - Simple healthcare dashboard
 - First-time smartphone friendly design
 - Android-compatible application
+  
 ---
 
 ## Technology Stack
 
 - React
 - TypeScript
-- Capacitor
+- Capacitor(Android Deployment)
 - Progressive Web App 
 - Android Studio
 - Local Storage
+
+---
+
+## Application Type
+
+Offline-first mobile application
+Progressive Web App (PWA)
+Android-compatible via Capacitor
+Responsive UI optimized for low-end devices
 
 ---
 
@@ -87,16 +102,51 @@ Shows emergency warning:
 
 ---
 
+## Project Structure
+
+matru-sneh-health/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── utils/
+│   ├── assets/
+│
+├── android/
+├── public/
+├── screenshots/
+├── package.json
+├── README.md
+
+---
+
 ## Development Information
 
 The application was developed using React with Capacitor for cross-platform Android deployment. Android Studio was used for APK generation and device testing.
 
 ---
+
 ## Project Goal
 
 The goal of Matru-Sneh Health is to provide accessible maternal healthcare support for rural pregnant women through a lightweight offline-capable mobile application.
 
 ---
+
+## Project Objective 
+To provide a simple, offline-capable maternal health assistant that helps rural pregnant women track essential health activities without requiring continuous internet access.
+
+---
+
+## Future Improvements
+
+AI-based pregnancy risk prediction
+Voice-based navigation for non-literate users
+Integration with government health systems
+Multi-language expansion
+Offline emergency SMS alerts
+
+---
+
 ## 📸 Screenshots
 
 ### Home Screen
@@ -124,4 +174,6 @@ The goal of Matru-Sneh Health is to provide accessible maternal healthcare suppo
 
 ### Weekly Guide (Kannada)
 ![Guide](screenshots/weekly-guide-kannada.png)
+
+---
 
