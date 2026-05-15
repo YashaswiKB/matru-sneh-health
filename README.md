@@ -116,13 +116,15 @@ matru-sneh-health/
 ├── README.md
 ```
 
-## Development Information
+---
+
+## 🚀 Development Information
 
 The application was developed using React with Capacitor for cross-platform Android deployment. Android Studio was used for APK generation and device testing.
 
 ---
 
-## Project Goal
+## 🎯 Project Goal
 
 The goal of Matru-Sneh Health is to provide accessible maternal healthcare support for rural pregnant women through a lightweight offline-capable mobile application.
 
