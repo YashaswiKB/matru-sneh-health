@@ -113,7 +113,7 @@ The goal of Matru-Sneh Health is to provide accessible maternal healthcare suppo
 ![Nutrition](screenshots/nutrition_plate.png)
 
 ### Checkup Countdown
-![Checkup](screenshots/check-up_countdown.png)
+![Checkup](screenshots/checkup-countdown.png)
 
 ### Danger Alert
 ![Alert](screenshots/danger_signs_alert.png)
