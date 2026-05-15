@@ -107,7 +107,7 @@ The goal of Matru-Sneh Health is to provide accessible maternal healthcare suppo
 ![Home](screenshots/home-screen-kannada.png)
 
 ### Kick Counter
-![Kick Counter](kick-counter.png)
+![Kick Counter](screenshots/kick-counter.png)
 
 ### Nutrition Tracker
 ![Nutrition](screenshots/nutrition-tracker.png)
